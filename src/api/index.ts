@@ -2,7 +2,7 @@ import express from "express";
 
 import MessageResponse from "../interfaces/MessageResponse";
 import emojis from "./emojis";
-import webhook from "./webhook";
+import login from "./login"
 
 const router = express.Router();
 
@@ -13,6 +13,6 @@ router.get<{}, MessageResponse>("/", (req, res) => {
 });
 
 router.use("/emojis", emojis);
-router.use("/webhook", webhook);
+router.use("/login", login);
 
 export default router;
